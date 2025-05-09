@@ -2,7 +2,7 @@ import { About } from "@/components/About";
 import { Header, SubHeader } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 
-//https://steam-portfolio-demo.vercel.app/#about
+
 
 export default function Home() {
   return (
