@@ -7,7 +7,7 @@ import { api } from "@/services/api";
 export const Repositories = ()=>{
     const [repos, setRepos] = useState<ReposProps[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    // https://api.github.com/repos/dev-ansu/ansulinks
+
     const repositorios = [
         'ansulinks',
         'devcontrole',
