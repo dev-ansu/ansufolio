@@ -1,11 +1,16 @@
+"use client";
+import { useEffect, useState } from "react";
 import { Dot } from "../Dot"
 
 export const Hero = ()=>{
+    const [text, setText] = useState("Aoba, meu nome é Anderson");
+
+
     return(
         <div className="my-16 w-full md:max-w-1/2">
             <div className="">
                 <h1 className="roboto-bold text-4xl md:text-7xl text-white">
-                    Aoba, meu nome é Anderson
+                    {text}
                     <Dot classes="w-5 h-5" />
                 </h1>
             </div>

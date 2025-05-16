@@ -2,7 +2,7 @@ import { About } from "@/components/About";
 import { Header, SubHeader } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
-
+import * as motion from "motion/react-client"
 
 
 export default function Home() {
@@ -11,8 +11,19 @@ export default function Home() {
         <Header />
   
         <div className="max-w-6xl m-auto p-6">
-          <SubHeader />
-          <Hero />
+            <SubHeader />
+          <motion.div
+            style={{
+              translateX: -500,
+              opacity: 0
+            }}
+            animate={{
+                translateX: 0,
+                opacity: 1,
+            }}
+          >
+            <Hero />
+          </motion.div>
           <About />
           <Projects />
         </div>
