@@ -5,7 +5,7 @@ import { Dot } from "../Dot";
 
 export const Header = ()=>{
     return(
-        <header className="bg-black h-full w-full flex flex-col items-center py-8 space-y-10">
+        <header className="bg-black min-h-screen flex flex-col items-center py-8 p-4 space-y-10">
         {/* Logo */}
         <Link href="/" className="w-10 h-10 rounded flex items-center justify-center">
           {/* Substitua com sua imagem ou ícone */}

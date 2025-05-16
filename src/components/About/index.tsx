@@ -1,6 +1,7 @@
 import { Terminal } from "lucide-react"
 import { Dot } from "../Dot"
 import { Tecnology } from "./Tecnology"
+import { AboutMe } from "./AboutMe"
 
 export const About = async ()=>{
     const tecnologies = [
@@ -20,6 +21,7 @@ export const About = async ()=>{
     return(
         <div id="about" className="my-32 w-full">
             <div className="">
+           
                 <h1 className="roboto-bold text-4xl md:text-7xl text-white">
                     Sobre mim
                     <Dot classes="w-5 h-5" />
@@ -27,11 +29,7 @@ export const About = async ()=>{
             </div>
 
             <div className="flex flex-col gap-8 md:flex-row mt-4 justify-start items-start">
-                <div className="w-full md:max-w-1/2">
-                    <p className="font-thin text-white text-lg">
-                        Eu tenho investido cinco anos estudando e aprendendo sobre Desenvolvimento Web nas mais diversas tecnologias. Além disso, tenho experiência como educador de informática, ensinando jovens e adultos desde o pacote Office a programação.
-                    </p>
-                </div>
+               <AboutMe />
 
                 <div className="flex flex-col w-full md:max-w-80">
 
