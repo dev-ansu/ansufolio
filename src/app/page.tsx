@@ -1,4 +1,5 @@
 import { About } from "@/components/About";
+import { Experiences } from "@/components/Experiences";
 import { Header, SubHeader } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
@@ -26,6 +27,7 @@ export default function Home() {
           </motion.div>
           <About />
           <Projects />
+          <Experiences />
         </div>
 
     </main>

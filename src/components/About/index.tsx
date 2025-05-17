@@ -3,7 +3,7 @@ import { Dot } from "../Dot"
 import { Tecnology } from "./Tecnology"
 import { AboutMe } from "./AboutMe"
 
-export const About = async ()=>{
+export const About = ()=>{
     const tecnologies = [
         "HTML",
         "CSS",
@@ -21,7 +21,6 @@ export const About = async ()=>{
     return(
         <div id="about" className="my-32 w-full">
             <div className="">
-           
                 <h1 className="roboto-bold text-4xl md:text-7xl text-white">
                     Sobre mim
                     <Dot classes="w-5 h-5" />

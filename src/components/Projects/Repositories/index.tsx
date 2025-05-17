@@ -6,8 +6,7 @@ import { api } from "@/services/api";
 
 export const Repositories = ()=>{
     const [repos, setRepos] = useState<ReposProps[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-
+  
     const repositorios = [
         'ansulinks',
         'devcontrole',
@@ -17,6 +16,7 @@ export const Repositories = ()=>{
         'tarefasplus',
         'webcarros'
     ]
+    
     useEffect(()=>{
         const getRepos = ()=>{
             repositorios.forEach(async(repo)=>{
@@ -28,17 +28,20 @@ export const Repositories = ()=>{
                     homepage: response.data.homepage,
                     html_url: response.data.html_url,
                 }]);
-                setIsLoading(false);
             })
         }
         getRepos();
     },[])
     return(
         <section className="w-full my-16 grid grid-cols-1 md:grid-cols-2 gap-4">
+            {repos.length < repositorios.length && [...Array(repositorios).keys()].map( qtd => (
+                <>
+                    <Project isLoading={true} />
+                </>
+            ))}
             {repos.map( repo => (
                 <>
-                    {isLoading && <Project isLoading={isLoading} />}
-                    {!isLoading && <Project project={repo} key={repo.name} isLoading={isLoading} />}
+                    <Project project={repo} key={repo.name} isLoading={false} />
                 </>
             ))}
         </section>

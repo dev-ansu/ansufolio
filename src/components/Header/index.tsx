@@ -14,9 +14,11 @@ export const Header = ()=>{
       
         {/* Navegação */}
         <nav className="flex flex-col items-center space-y-6">
+   
           <Link href="/#about" className="text-gray-400 border-b-[1px] w-full text-center border-b-transparent hover:border-b-purple-500 hover:text-white transition-all uppercase text-sm tracking-wide">
             Sobre
           </Link>
+        
           <Link href="/#projects" className="text-gray-400 border-b-[1px] w-full text-center border-b-transparent hover:border-b-purple-500 hover:text-white transition-all uppercase text-sm tracking-wide">
             Projetos
           </Link>

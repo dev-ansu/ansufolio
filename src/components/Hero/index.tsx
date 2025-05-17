@@ -1,21 +1,20 @@
-"use client";
-import { useEffect, useState } from "react";
-import { Dot } from "../Dot"
+
+import { TypingText } from "./components"
 
 export const Hero = ()=>{
-    const [text, setText] = useState("Aoba, meu nome é Anderson");
-
-
+   
     return(
         <div className="my-16 w-full md:max-w-1/2">
             <div className="">
                 <h1 className="roboto-bold text-4xl md:text-7xl text-white">
-                    {text}
-                    <Dot classes="w-5 h-5" />
+                    <TypingText 
+                        fullText="Aoba, meu nome é Anderson."
+                    />
                 </h1>
             </div>
             <div className="mt-4">
-                <h2 className="text-white text-xl md:text-2xl"><span className="font-thin">Eu sou um</span> <span className="roboto-bold text-purple-300">Desenvolvedor FullStack</span></h2>
+                <h2 className="text-white text-xl md:text-2xl"><span className="font-thin">Eu sou um</span> <span className="roboto-bold text-purple-300">Desenvolvedor <TypingText fullText="FullStack" />
+                </span></h2>
             </div>
 
             <div className="mt-4">
